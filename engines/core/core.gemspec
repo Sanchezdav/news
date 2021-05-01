@@ -1,8 +1,8 @@
-require_relative "lib/news/core/version"
+require_relative "lib/core/version"
 
 Gem::Specification.new do |spec|
-  spec.name        = "news_core"
-  spec.version     = News::Core::VERSION
+  spec.name        = "core"
+  spec.version     = Core::VERSION
   spec.authors     = ["David"]
   spec.email       = ["sanchez.dav90@gmail.com"]
   spec.homepage    = "https://github.com/Sanchezdav/news"

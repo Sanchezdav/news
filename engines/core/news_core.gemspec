@@ -1,8 +1,8 @@
-require_relative "lib/core/version"
+require_relative "lib/news/core/version"
 
 Gem::Specification.new do |spec|
-  spec.name        = "core"
-  spec.version     = Core::VERSION
+  spec.name        = "news_core"
+  spec.version     = News::Core::VERSION
   spec.authors     = ["David"]
   spec.email       = ["sanchez.dav90@gmail.com"]
   spec.homepage    = "https://github.com/Sanchezdav/news"
@@ -21,4 +21,6 @@ Gem::Specification.new do |spec|
   spec.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
 
   spec.add_dependency "rails", "~> 6.1.3", ">= 6.1.3.1"
+  spec.add_dependency "devise", "~> 4.7.3"
+  spec.add_dependency "cancancan"
 end

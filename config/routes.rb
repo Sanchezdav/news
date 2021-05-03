@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-  mount Core::Engine => '/', as: 'news'
+  mount News::Core::Engine => '/', as: 'news'
 end

@@ -1,0 +1,35 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light
+            navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <%= link_to 'News', news.root_path, class: 'navbar-brand' %>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse d-flex justify-content-end align-items-center" id="navbarTogglerDemo01">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <% if user_signed_in? %>
+          <div class="d-flex">
+            <li class="nav-item">
+              <%= link_to 'My Account', news.edit_user_registration_path,
+                          class: "nav-link #{active(news.edit_user_registration_path)} " %>
+            </li>
+            <li class="nav-item">
+              <%= button_to 'Logout', news.destroy_user_session_path, method: :delete, class: "nav-link btn btn-link" %>
+            </li>
+          </div>
+        <% else %>
+          <div class="d-flex">
+            <li class="nav-item">
+              <%= link_to 'Login', news.new_user_session_path,
+                          class: "nav-link #{active(news.new_user_session_path)}" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to 'Signup', news.new_user_registration_path,
+                          class: "nav-link #{active(news.new_user_registration_path)}" %>
+            </li>
+          </div>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</nav>
